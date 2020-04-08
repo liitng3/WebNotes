@@ -25,15 +25,8 @@ module.exports = function (grunt) {
         preserveLineBreaks: false
       },
       files: {
-        src: './index.html',
-        dest: 'dist/index.html'
-      }
-    },
-    imagemin: {
-      files: {
-        expand: true,
-        src: ['./images/*.png'],
-        dest: 'dist/'
+        src: './dist/index.html',
+        dest: './dist/index.html'
       }
     },
     copy: {
@@ -78,6 +71,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
-  grunt.loadNpmTasks('grunt-usemin');
-  grunt.registerTask('default', ['htmlhint', 'csslint', 'eslint','copy', 'useminPrepare', 'concat', 'uglify', 'cssmin','htmlmin', 'usemin',  'imagemin']);
+  grunt.loadNpmTasks('grunt-usemin'); 
+  grunt.registerTask('default', ['htmlhint', 'csslint', 'eslint','copy',  'concat', 'uglify', 'usemin', 'htmlmin','cssmin']);
 };
